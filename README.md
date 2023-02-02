@@ -99,5 +99,23 @@ Geological map (lithology, dike, ...)
 `trend analysis`
 
 
+##**4)Geostatistics**
+
+*The empirical variogram and variogram Cloud*
+
+![image](https://user-images.githubusercontent.com/123794462/216273360-6ce1491d-4fa7-4f27-8f94-de3691d8f94b.png)
+![image](https://user-images.githubusercontent.com/123794462/216273440-a58547a6-5ca4-4d27-a939-5fa0169137c1.png)
+
+`variogram {gstat}`
+
+*Generates a variogram model and Fit ranges, sills, nugget*
+
+![image](https://user-images.githubusercontent.com/123794462/216273556-e55e833f-eaac-495f-bdf9-b86dec988a2d.png)
+![image](https://user-images.githubusercontent.com/123794462/216273582-c99610ce-5602-4cb7-846d-52eb0f12c665.png)
+
+SSE of manual fit is 0.01252028 and automatic fit  is 0.005756448 `vgm {gstat}, fit.variogram {gstat}`
+
+![image](https://user-images.githubusercontent.com/123794462/216300611-aa6cffaa-5cfc-4a06-8f0c-ee5f5a812afc.png)
+**interpolation methods**
 
 
