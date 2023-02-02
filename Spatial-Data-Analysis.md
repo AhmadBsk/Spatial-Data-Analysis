@@ -1,3 +1,7 @@
+*author: AhmadReza Boskabadi*
+*date:   2 Feb 2023*
+*Email:  ahmadreza.boskabadi@gmail.com*
+
 # Spatial-Data-Analysis
 Applied Spatial Data Analysis in geoscience
 
@@ -113,7 +117,7 @@ Geological map (lithology, dike, ...)
 ![image](https://user-images.githubusercontent.com/123794462/216273556-e55e833f-eaac-495f-bdf9-b86dec988a2d.png)
 ![image](https://user-images.githubusercontent.com/123794462/216273582-c99610ce-5602-4cb7-846d-52eb0f12c665.png)
 
-SSE of manual fit is 0.01252028 and automatic fit  is 0.005756448 `vgm {gstat}, fit.variogram {gstat}`
+`vgm {gstat}, fit.variogram {gstat}` *SSE of manual fit is 0.01252028 and automatic fit  is 0.005756448* 
 
 ##**5)interpolation**
 
@@ -122,6 +126,7 @@ SSE of manual fit is 0.01252028 and automatic fit  is 0.005756448 `vgm {gstat}, 
 *interpolation methods*
 
 ###**idw**
+
 ![image](https://user-images.githubusercontent.com/123794462/216302532-4670478b-a542-47fc-8247-246724b96c75.png)
 
 *idw =  function for inverse distance weighted interpolation, Idp = numeric; specify the inverse distance weighting power*
@@ -154,6 +159,7 @@ SSE of manual fit is 0.01252028 and automatic fit  is 0.005756448 `vgm {gstat}, 
 ###**model-based geostatistics**
 
 *SPDE*
+
 ![image](https://user-images.githubusercontent.com/123794462/216305399-c09959cf-2094-4101-92a6-a9e03cd209c8.png)
 
 `inla.mesh.2d {INLA} High-quality triangulations` 
@@ -162,19 +168,21 @@ max.edge = c(inside the boundary triangle, outside the boundary triangle)
 offset is defining how far you want to extend your domain (i.e. a secondary boundary box)
 cutoff can be used to avoid building too many small triangles around clustered data locations*
 
-![image](https://user-images.githubusercontent.com/123794462/216306202-5ca4c78d-eb9b-4e62-ab26-f24acc269dcd.png)
+![image](https://user-images.githubusercontent.com/123794462/216308583-792d489a-7191-4b32-a25c-0a6b70a045de.png)
 
 `inla.mesh.2d {INLA} High-quality triangulations`
 
 *INLA*
 ![image](https://user-images.githubusercontent.com/123794462/216307343-4fdadfe5-822c-41d5-9db5-b339aeef2cbe.png)
 
-`inla.spde.make.A {INLA} Observation/prediction matrices for mesh models.
-inla.spde2.matern {INLA} Matern SPDE model object for INLA
-inla.spde.make.index {INLA} SPDE model index vector generation
-inla.stack {INLA} Data stacking for advanced INLA models
-formula <- y ~ 0 + b0 + f(s, model = spde)
-inla {INLA} Bayesian analysis of structured additive models`
+`inla.spde.make.A {INLA}` *Observation/prediction matrices for mesh models*
+`inla.spde2.matern {INLA}` *Matern SPDE model object for INLA*
+`inla.spde.make.index {INLA}` *SPDE model index vector generation*
+`inla.stack {INLA}` *Data stacking for advanced INLA models*
+`formula <- y ~ 0 + b0 + f(s, model = spde)`
+`inla {INLA}` *Bayesian analysis of structured additive models*
 
-
+author: AhmadReza Boskabadi
+date:   2 Feb 2023
+Email:  ahmadreza.boskabadi@gmail.com
 
