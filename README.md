@@ -104,7 +104,7 @@ Geological map (lithology, dike, ...)
 *The empirical variogram and variogram Cloud*
 
 ![image](https://user-images.githubusercontent.com/123794462/216273360-6ce1491d-4fa7-4f27-8f94-de3691d8f94b.png)
-![image](https://user-images.githubusercontent.com/123794462/216273440-a58547a6-5ca4-4d27-a939-5fa0169137c1.png)
+![image](https://user-images.githubusercontent.com/123794462/216301938-ecdf5565-b8da-4ecf-b588-c62f5a416715.png)
 
 `variogram {gstat}`
 
@@ -115,7 +115,15 @@ Geological map (lithology, dike, ...)
 
 SSE of manual fit is 0.01252028 and automatic fit  is 0.005756448 `vgm {gstat}, fit.variogram {gstat}`
 
+##**5)interpolation**
+
 ![image](https://user-images.githubusercontent.com/123794462/216300611-aa6cffaa-5cfc-4a06-8f0c-ee5f5a812afc.png)
-**interpolation methods**
+
+*interpolation methods*
+
+![image](https://user-images.githubusercontent.com/123794462/216302532-4670478b-a542-47fc-8247-246724b96c75.png)
+
+*idw =  function for inverse distance weighted interpolation*
+*Idp = numeric; specify the inverse distance weighting power*
 
 
