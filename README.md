@@ -130,7 +130,7 @@ SSE of manual fit is 0.01252028 and automatic fit  is 0.005756448 `vgm {gstat}, 
 
 `idw{gstat}, idp = 2,krige {gstat}, spplot {raster}, resolution is 100*100`
 
-###**kriging
+###**kriging**
 ![image](https://user-images.githubusercontent.com/123794462/216303229-0815f1cb-4f1a-4176-9d69-6bf9f481db13.png)
 
 `krige {gstat}, spplot {raster}, resolution is 100*100`
@@ -139,7 +139,7 @@ SSE of manual fit is 0.01252028 and automatic fit  is 0.005756448 `vgm {gstat}, 
 
 `krige {gstat}, spplot {raster}, st_crop {sf}, resolution is 718*836`
 
-![image](https://user-images.githubusercontent.com/123794462/216304019-a64dc23c-7e83-475d-b405-646cd7390af9.png)
+![image](https://user-images.githubusercontent.com/123794462/216304959-ab4ec379-4aec-498e-a3ac-92e3e6980fdd.png)
 
 `krige {gstat}, geom_stars {stars}, st_crop {sf}, resolution is 718*836`
 
@@ -150,6 +150,31 @@ SSE of manual fit is 0.01252028 and automatic fit  is 0.005756448 `vgm {gstat}, 
 ![image](https://user-images.githubusercontent.com/123794462/216304414-68ac533a-dbf3-4b31-8c25-eaf02c80c369.png)
 
 `raster {raster}, KML {raster}` *used by Google Earth*
+
+###**model-based geostatistics**
+
+*SPDE*
+![image](https://user-images.githubusercontent.com/123794462/216305399-c09959cf-2094-4101-92a6-a9e03cd209c8.png)
+
+`inla.mesh.2d {INLA} High-quality triangulations` 
+*max.edge is the largest allowed triangle length; lower number equal higher the resolution
+max.edge = c(inside the boundary triangle, outside the boundary triangle)
+offset is defining how far you want to extend your domain (i.e. a secondary boundary box)
+cutoff can be used to avoid building too many small triangles around clustered data locations*
+
+![image](https://user-images.githubusercontent.com/123794462/216306202-5ca4c78d-eb9b-4e62-ab26-f24acc269dcd.png)
+
+`inla.mesh.2d {INLA} High-quality triangulations`
+
+*INLA*
+![image](https://user-images.githubusercontent.com/123794462/216307343-4fdadfe5-822c-41d5-9db5-b339aeef2cbe.png)
+
+`inla.spde.make.A {INLA} Observation/prediction matrices for mesh models.
+inla.spde2.matern {INLA} Matern SPDE model object for INLA
+inla.spde.make.index {INLA} SPDE model index vector generation
+inla.stack {INLA} Data stacking for advanced INLA models
+formula <- y ~ 0 + b0 + f(s, model = spde)
+inla {INLA} Bayesian analysis of structured additive models`
 
 
 
