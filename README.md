@@ -121,9 +121,35 @@ SSE of manual fit is 0.01252028 and automatic fit  is 0.005756448 `vgm {gstat}, 
 
 *interpolation methods*
 
+###**idw**
 ![image](https://user-images.githubusercontent.com/123794462/216302532-4670478b-a542-47fc-8247-246724b96c75.png)
 
-*idw =  function for inverse distance weighted interpolation*
-*Idp = numeric; specify the inverse distance weighting power*
+*idw =  function for inverse distance weighted interpolation, Idp = numeric; specify the inverse distance weighting power*
+
+![image](https://user-images.githubusercontent.com/123794462/216303061-d9565583-11fb-4a78-a8c5-b6606359c596.png)
+
+`idw{gstat}, idp = 2,krige {gstat}, spplot {raster}, resolution is 100*100`
+
+###**kriging
+![image](https://user-images.githubusercontent.com/123794462/216303229-0815f1cb-4f1a-4176-9d69-6bf9f481db13.png)
+
+`krige {gstat}, spplot {raster}, resolution is 100*100`
+
+![image](https://user-images.githubusercontent.com/123794462/216303446-7b5709cb-dbd8-40d5-9f12-3915026c9eb0.png)
+
+`krige {gstat}, spplot {raster}, st_crop {sf}, resolution is 718*836`
+
+![image](https://user-images.githubusercontent.com/123794462/216304019-a64dc23c-7e83-475d-b405-646cd7390af9.png)
+
+`krige {gstat}, geom_stars {stars}, st_crop {sf}, resolution is 718*836`
+
+![image](https://user-images.githubusercontent.com/123794462/216304150-2e465c0d-5d9c-4169-af15-fb1f3db365a9.png)
+
+`plot_ly {plotly}` *3D visualization*
+
+![image](https://user-images.githubusercontent.com/123794462/216304414-68ac533a-dbf3-4b31-8c25-eaf02c80c369.png)
+
+`raster {raster}, KML {raster}` *used by Google Earth*
+
 
 
